@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Drawing 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin-top: 50px;
+      }
+      h1 {
+        text-align: center;
+      }
+      #canvas {
+        margin: auto;
+        display: block;
+        border: 1px solid silver;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Canvas Drawing</h1>
+    <canvas id="canvas" width="1000px" height="500px"></canvas>
+
+    <script>
+      // Create variables
+      const canvas = window.document.querySelector("#canvas");
+      const ctx = canvas.getContext("2d");
+
+      // Front of train
+      ctx.fillStyle = "lime";
+      ctx.fillRect(300, 210, 150, 150);
+
+      // Back of train
+      ctx.fillStyle = "orange";
+      ctx.fillRect(446, 150, 230, 210);
+
+      // Train steam
+      ctx.fillStyle = "black";
+      ctx.fillRect(300, 130, 40, 80);
+
+      // Window
+      ctx.fillStyle = "black";
+      ctx.fillRect(470, 210, 70, 70);
+      ctx.fillRect(590, 210, 70, 70);
+
+      //   wheels
+      ctx.fillStyle = "lightblue";
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = "4";
+
+      ctx.arc(300, 395, 40, 0, Math.PI * 2);
+      ctx.arc(500, 395, 40, 0, Math.PI * 2);
+      ctx.arc(680, 395, 40, 0, Math.PI * 2);
+      ctx.fill(); // Color it in
+      ctx.stroke(); // Draw it
+
+      // hood
+      ctx.fillStyle = "pink";
+      ctx.fillRect(420, 70, 280, 80);
+
+      // Front of train
+      ctx.fillStyle = "red";
+      ctx.beginPath(); // Pick up pen/pencil
+      ctx.moveTo(300, 350); // Starting point
+      ctx.lineTo(300, 260); // pick end point 1
+      ctx.lineTo(200, 350); // pick end point 2
+
+      ctx.closePath(); //close the path
+      ctx.fill(); // Fill the path
+      ctx.stroke(); // Draw
+    </script>
+  </body>
+</html>

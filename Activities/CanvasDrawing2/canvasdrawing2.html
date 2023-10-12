@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Drawing</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin-top: 50px;
+      }
+      h1 {
+        text-align: center;
+      }
+      #canvas {
+        margin: auto;
+        display: block;
+        border: 1px solid silver;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Canvas Drawing</h1>
+    <canvas id="canvas" width="1000px" height="500px"></canvas>
+
+    <script>
+      // Create variables
+      const canvas = window.document.querySelector("#canvas");
+      const ctx = canvas.getContext("2d");
+
+      //grass 1
+      ctx.fillStyle = "lime";
+      ctx.beginPath(); // Pick up pen/pencil
+      ctx.moveTo(50, 400); // Starting point
+      ctx.lineTo(20, 500); // pick end point 1
+      ctx.lineTo(70, 500); // pick end point 2
+
+      ctx.closePath(); //close the path
+      ctx.fill(); // Fill the path
+      ctx.stroke(); // Draw
+      
+      // grass 2
+      ctx.fillStyle = "green";
+      ctx.beginPath(); // Pick up pen/pencil
+      ctx.moveTo(240, 400); // Starting point
+      ctx.lineTo(220, 500); // pick end point 1
+      ctx.lineTo(260, 500); // pick end point 2
+
+      ctx.closePath(); //close the path
+      ctx.fill(); // Fill the path
+      ctx.stroke(); // Draw
+      
+      // fish
+      ctx.fillStyle = "orange";
+      ctx.fillRect(250,250, 100,70);
+
+      // fish eye
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = "4";
+
+      ctx.arc(300, 395, 10, 0, Math.PI * 2);
+      ctx.arc(500, 395, 10, 0, Math.PI * 2);
+      ctx.arc(680, 395, 10, 0, Math.PI * 2);
+      ctx.fill(); // Color it in
+      ctx.stroke(); // Draw it
+
+
+
+
+ 
+  
+    </script>
+  </body>
+</html>
