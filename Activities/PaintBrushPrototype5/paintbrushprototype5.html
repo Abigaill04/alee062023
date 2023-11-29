@@ -45,7 +45,7 @@
         <input type="color" id="colorpicker" value="#000000" />
         <input type="range" id="rangepicker" min="2" max="100" value="15" />
       </div>
-      <div id="erasing"><img src="Images/eraser.png" alt="Eraser"/></div>
+      <div id="eraser"><img src="Images/eraser.png" alt="Eraser"/></div>
 
       <div id="clear">
         
@@ -72,8 +72,8 @@
       const colorPicker = window.document.querySelector("#colorpicker");
       // Rangepicker variable
       const rangePicker = window.document.querySelector("#rangepicker");
-      //  Eraser variable
-      const erase = window.document.querySelector("#erasing");
+      // Eraser variable
+      const erase = window.document.querySelector("#eraser");
       // Clear variable 
       const clear = window.document.querySelector("#clear");
 
@@ -140,9 +140,8 @@
 
         // alert("Hello!");
 
-        ctx.fillStyle = canvasColor;
-
         ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = canvasColor;
       })
 
       // Add event listener
