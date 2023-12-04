@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <h2>Index, Push, Pop, and Shift</h2>
+    <h2>ForEach, Console.log</h2>
+    <script>
+
+    // Arrays
+
+    // Create array variable 
+    let favoriteBook = [];
+
+    // Add values to array using index
+    favoriteBook[0] = "The Little Prince";
+    favoriteBook[1] = "One of us is Lying";
+    favoriteBook[2] = "The Book Thief";
+    favoriteBook[3] = "Better Than The Movies";
+
+    // Add values to array using the push method
+    favoriteBook.push("A Good Girl's Guide to Murder");
+    favoriteBook.push("The Cruel Prince");
+    favoriteBook.push("The Fault In Our Stars");
+
+    window.document.write( favoriteBook );
+
+    // Delete last value of an array using the pop method
+    favoriteBook.pop();
+
+    // Delete the first value of an Array using the shift method
+    favoriteBook.shift();
+
+    // window.alert( favoriteBook);
+
+    console.log(favoriteBook);
+
+
+    // List array length (total values in arrays)
+    console.log(favoriteBook.length);
+
+    // Cycle through array using forEach method
+    favoriteBook.forEach(function(bookname, index){
+
+        console.log(index + " " + bookname)
+    });
+
+    // Cycle through array using forEach method
+
+    favoriteBook.forEach(function(bookname, index) {
+        
+        window.alert(bookname + " is index " + index )
+    });
+
+
+
+    </script>
+</body>
+</html>
