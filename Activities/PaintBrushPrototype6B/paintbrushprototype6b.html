@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -43,7 +43,6 @@ width: 15px;
 div {
         padding-right: 35px;
       }
-
       img {
         width: 35px;
       }
@@ -79,7 +78,7 @@ ctx.lineCap = 'round';
 const colorPicker = window.document.querySelector('#colorpicker');
 // Rangepicker variable
 const rangePicker = window.document.querySelector('#rangepicker');
-const erase = window.document.querySelector('#right');
+const erase = window.document.querySelector('#eraser');
 const clear = window.document.querySelector('#clear');
 const previousColorBox = window.document.querySelector('#previouscolor');
 
@@ -92,7 +91,6 @@ let brushSize = 15;
 let boxColor = brushColor;
 let previousColor = brushColor;
 let isPreviousColorActive = false;
-previousColorBox.style.backgroundColor = boxColor;
 
 // Set the canvas size
 canvas.width = window.innerWidth;
@@ -100,6 +98,9 @@ canvas.height = window.innerHeight;
 
 // Set canvas color
 canvas.style.backgroundColor = canvasColor;
+
+// Set color box color
+previousColorBox.style.backgroundColor = boxColor;
 
 // Create mouse object
 const mouse = {
@@ -183,7 +184,6 @@ clear.addEventListener('click', function(e){
 ctx.fillStyle = canvasColor;
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 });
-
 
 // Add event listener
 window.addEventListener('resize', function(){
