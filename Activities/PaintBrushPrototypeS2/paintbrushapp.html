@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,6 +38,14 @@
       img {
         width: 35px;
       }
+
+      #previouscolor{
+        height: 9px;
+        width: 15px;
+        background-color: black;
+        margin: 3px;
+
+      }
     </style>
   </head>
   <body>
@@ -45,14 +54,23 @@
       <div id="drawing">
         <input type="color" id="colorpicker" value="#000000" />
         <input type="range" id="rangepicker" min="2" max="100" value="15" />
+
+
+        <div id="previouscolor"></div>
       </div>
-      <div id="eraser"><img src="Images/eraser.png" alt="Eraser" /></div>
+
+      <div id="eraser">
+        <img src="Images/eraser.png" alt="Eraser" />
+      </div>
 
       <div id="clear">
-        <!-- <button id="clear"> Clear </button> -->
-
-        <img id="clear" src="Images/bin.png" alt="Trash Can" />
+        <img src="Images/bin.png" alt="Trash Can" />
       </div>
+
+      <div id="undo">
+        <img src="Images/undo.svg" alt="undo">
+      </div>
+
     </section>
     <script>
       // Create JavaScript variables
@@ -137,6 +155,7 @@
       clear.addEventListener("click", function (e) {
         // alert("Hello!");
         ctx.fillStyle = canvasColor;
+
         ctx.fillRect(0, 0, canvas.width, canvas.height);
       });
 
