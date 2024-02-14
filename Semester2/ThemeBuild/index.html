@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Build For Astro</title>
+    <style>
+        /* Basic Style */
+        :root
+        {
+            --color-primary:red;
+            --color-secondary:blue;
+        }
+
+        html
+        {
+            font-size: 62.5%;  
+
+            /* Allows you to use rems instead of pixels for sizing */
+            /* 0.5rem = 5px */
+            /* 1rem = 10px */
+            /* 1.6rem = 16px */
+            /* 2rem = 20px */
+            /* 6rem - 60px */
+        }
+
+        body
+        {
+            font-size: 1.6rem;
+        }
+
+        /* Media Queries */
+        @media only screen and (min-width:320px)
+        {
+            body
+            {
+                background-color: magenta;
+            }
+        }
+        
+        @media only screen and (min-width:480px)
+        {
+            body
+            {
+                background-color: yellow;
+            }
+        }
+        
+        @media only screen and (min-width:768px)
+        {
+            body
+            {
+                background-color: lime;
+            }
+        }
+
+        @media only screen and (min-width:1024px)
+        {
+            body
+            {
+                background-color: coral;
+            }
+        }
+
+        @media only screen and (min-width:1200px)
+        {
+            body
+            {
+                background-color: steelblue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+
+
+</body>
+</html>
