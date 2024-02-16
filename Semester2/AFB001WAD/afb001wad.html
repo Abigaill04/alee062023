@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFB001WAD - Flexbox Layout</title>
+
+    <style>
+      * {
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #f9d3bd;
+      }
+      #container {
+        width: 80%;
+        margin: auto;
+        display: block;
+      }
+      #header {
+        min-height: 150px;
+        background-color: #ce6a6b;
+        padding: 10px;
+      }
+      #nav {
+        min-height: 500px;
+        background-color: #ebaca2;
+        padding: 10px;
+        flex: 1;
+      }
+      #main {
+        min-height: 500px;
+        background-color: #bed3c3;
+        padding: 10px;
+        flex: 2;
+      }
+      .articles {
+        min-height: 200px;
+        background-color: #4a919e;
+        padding: 10px;
+        flex: 1;
+        border: 2px solid black;
+      }
+
+      #footer {
+        min-height: 150px;
+        background-color: #374b83;
+        padding: 10px;
+      }
+
+      #flexbox001 {
+        display: flex;
+        border: 3px solid black;
+      }
+      #flexbox002 {
+        display: flex;
+        border: 3px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header id="header">Header</header>
+
+      <div id="flexbox001">
+        <nav id="nav">Nav</nav>
+        <main id="main">Main</main>
+      </div>
+
+      <div id="flexbox002">
+        <article id="article1" class="articles">Article - Flex 1</article>
+        <article id="article2" class="articles">Article - Flex 1</article>
+        <article id="article3" class="articles">Article - Flex 1</article>
+      </div>
+
+      <footer id="footer">footer</footer>
+    </div>
+  </body>
+</html>
