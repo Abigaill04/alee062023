@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays - ForEach</title>
+</head>
+<body>
+    <h1>Arrays - ForEach</h1>
+
+    <script>
+        // Create an Array
+        let teachers = ["Chagoyan", "McDaniel", "Sexton", "Rizo", "McCaleb"];
+
+        // console.log(teachers);
+
+        // Modify array values with forEach
+        teachers.forEach(addPrefix);
+
+        // Function for teachers
+        function addPrefix(teacher) {
+            console.log("Mr. " + teacher);
+        }
+
+        // Short Version
+
+        teachers.forEach(function(teacher)
+        {
+            console.log("Master " + teacher);
+        });
+
+    </script>
+</body>
+</html>
