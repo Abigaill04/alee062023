@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements and Data Attributes</title>
+    <style>
+        h1, h2, h3
+        {
+            text-align: center;
+        }
+
+        blockquote::before
+        {
+            font-size:64px;
+            background-color: none;
+            content: " “ ";
+        }
+        blockquote::after
+        {
+            font-size:64px;
+            background-color: none;
+            content: " ” ";
+        }
+
+        blockquote[data-short]
+        {
+            background-color: pink;
+        }
+
+        blockquote[data-source]
+        {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo Elements and Data Attributes</h1>
+    <h2>::before and ::after</h2>
+    <h3>Blockquote Element</h3> 
+
+    <!-- Styling with data attritute -->
+    <blockquote data-short="Babe">Never let the fear of striking out... - Babe Ruth</blockquote>
+    <blockquote data-short="Abe">Never the the fear of striking out... - Abe Lincoln</blockquote>
+
+    <!-- JavaScript with data attritute -->
+    <blockquote data-source="Frankline D Roosevelt">Never the the fear of striking out... - Frankline D Roosevelt</blockquote>
+    <blockquote data-source="Elenor Roosevelt">Never the the fear of striking out... - Elenor Roosevelt</blockquote>
+
+<script>
+
+</script>
+</body>
+</html>
